@@ -3,21 +3,21 @@
 <head lang="en">
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="vendor/foundation/foundation.min.css">
+  <link rel="stylesheet" href="vendor/css/foundation.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body ng-app="App">
 
-  <div ng-app="App">
-    <div ng-controller="ViewportController">
-    	{{test}}
-    </div>
-    
-    <div class="panel" ng-controller="ControlbarController">
-    	{{test}}
-    </div>
+  <div ng-controller="AppController">
+    <viewport renderer="renderer" stats="stat" resize-fn="resizeHandler()"></viewport>
+<!--     <controlbar>
+      <button class="button">{{test}}</button>
+    </controlbar> -->
   </div>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="vendor/js/three.min.js"></script>
+  <script type="text/javascript" src="vendor/js/stats.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
